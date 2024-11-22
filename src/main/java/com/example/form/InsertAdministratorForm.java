@@ -19,7 +19,7 @@ public class InsertAdministratorForm {
 	@Email(message="Eメールの形が不正です")
 	private String mailAddress;
 	/** パスワード */
-	@Size(min=6, max=12, message="Eメールは6文字以上12文字以内で記入してください")
+	@Size(min=6, max=12, message="パスワードは6文字以上12文字以内で記入してください")
 	private String password;
 	
 	public String getName() {
