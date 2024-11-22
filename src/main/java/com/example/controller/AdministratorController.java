@@ -83,7 +83,6 @@ public class AdministratorController {
 			return toInsert(model);
 		}
 		Administrator administrator = new Administrator();
-		// フォームからドメインにプロパティ値をコピー
 		BeanUtils.copyProperties(form, administrator);
 		administratorService.insert(administrator);
 		return "redirect:/";
@@ -115,6 +114,7 @@ public class AdministratorController {
 			redirectAttributes.addFlashAttribute("errorMessage", "メールアドレスまたはパスワードが不正です。");
 			return "redirect:/";
 		}
+		session.setAttribute("loginUser", administrator.getName());
 		return "redirect:/employee/showList";
 	}
 
