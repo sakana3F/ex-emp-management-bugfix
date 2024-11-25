@@ -1,5 +1,6 @@
 package com.example.domain;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -170,6 +171,12 @@ public class Employee {
 		this.dependentsCount = dependentsCount;
 	}
 
+  public String getFormattedHireDate() {
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
+    return sdf.format(hireDate);
+  }
+
+  
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", image=" + image + ", gender=" + gender + ", hireDate="
