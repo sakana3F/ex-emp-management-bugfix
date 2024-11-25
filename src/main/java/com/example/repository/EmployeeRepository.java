@@ -45,7 +45,7 @@ public class EmployeeRepository {
 	private NamedParameterJdbcTemplate template;
 
 	/**
-	 * 従業員一覧情報を入社日が新しい順で取得します
+	 * 従業員一覧情報を入社日が新しい順,アドレスの昇順で取得します
 	 * 
 	 * @return 全従業員一覧 従業員が存在しない場合はサイズ0件の従業員一覧を返します
 	 */
