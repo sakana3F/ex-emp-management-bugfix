@@ -1,5 +1,7 @@
 package com.example.domain;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -174,6 +176,11 @@ public class Employee {
   public String getFormattedHireDate() {
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
     return sdf.format(hireDate);
+  }
+
+  public String getFormattedSalary() {
+	NumberFormat salaryformat =  new DecimalFormat("###,###");
+	return salaryformat.format(salary);
   }
 
   
