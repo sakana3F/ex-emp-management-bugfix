@@ -71,6 +71,7 @@
                         placeholder="山田太郎"
                         th:field="*{name}"
                         th:errorclass="error-input"
+                        th:text="${name}"
                         value="山田太郎"
                       />
                     </div>
@@ -95,6 +96,7 @@
                         placeholder="yamada@mail.com"
                         th:field="*{mailAddress}"
                         th:errorclass="error-input"
+                        th:text="${mailAddress}"
                         value="yamada@mail.com"
                       />
                     </div>
@@ -119,6 +121,7 @@
                         placeholder="password"
                         th:field="*{password}"
                         th:errorclass="error-input"
+                        th:text="${password}"
                         value="xxxxxxxx"
                       />
                     </div>
