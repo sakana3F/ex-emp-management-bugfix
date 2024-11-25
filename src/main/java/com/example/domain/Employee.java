@@ -173,15 +173,6 @@ public class Employee {
 		this.dependentsCount = dependentsCount;
 	}
 
-  public String getFormattedHireDate() {
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
-    return sdf.format(hireDate);
-  }
-
-  public String getFormattedSalary() {
-	NumberFormat salaryformat =  new DecimalFormat("###,###");
-	return salaryformat.format(salary);
-  }
 
   
 	@Override
