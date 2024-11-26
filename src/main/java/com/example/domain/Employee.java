@@ -1,5 +1,8 @@
 package com.example.domain;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -170,6 +173,8 @@ public class Employee {
 		this.dependentsCount = dependentsCount;
 	}
 
+
+  
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", image=" + image + ", gender=" + gender + ", hireDate="
