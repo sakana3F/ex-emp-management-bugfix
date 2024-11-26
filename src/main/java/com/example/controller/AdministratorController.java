@@ -82,6 +82,11 @@ public class AdministratorController {
 			// 入力エラーがある場合、再度登録画面を表示し、入力値を保持 
 			return toInsert(model);
 		}
+			//メールアドレスの重複チェック
+		if (administratorService.isMailAddressDuplicated(form.getMailAddress())) {
+			model.addAttribute("mailAddressDuplicate", "このメールアドレスは既に登録されています。");
+			return toInsert(model);
+		}
 			//パスワードと確認用パスワードが一致しているかの確認
 		if(!form.getPassword().equals(form.getConfirmPassword())) {
 			model.addAttribute("Mismatch", "パスワードと確認用パスワードが一致しません。");
