@@ -12,7 +12,7 @@ public class LoginForm {
 	private String mailAddress;
 	/** パスワード */
 	private String password;
-
+	/** 確認用パスワード */
 	public String getMailAddress() {
 		return mailAddress;
 	}

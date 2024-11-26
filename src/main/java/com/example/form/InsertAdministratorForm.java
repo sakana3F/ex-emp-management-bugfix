@@ -21,7 +21,11 @@ public class InsertAdministratorForm {
 	/** パスワード */
 	@Size(min=6, max=12, message="パスワードは6文字以上12文字以内で記入してください")
 	private String password;
-	
+	/** 確認用パスワード */
+	@NotBlank(message = "確認用パスワードを入力してください")
+	private String confirmPassword;
+
+
 	public String getName() {
 		return name;
 	}
@@ -46,10 +50,20 @@ public class InsertAdministratorForm {
 		this.password = password;
 	}
 
+	public String getConfirmPassword() {
+		return confirmPassword;
+	}
+
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
+	}
+
 	@Override
 	public String toString() {
 		return "InsertAdministratorForm [name=" + name + ", mailAddress=" + mailAddress + ", password=" + password
-				+ "]";
+				+ ", confirmPassword=" + confirmPassword + "]";
 	}
+
+	
 
 }
