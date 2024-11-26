@@ -40,4 +40,17 @@ public class AdministratorService {
 		Administrator administrator = administratorRepository.findByMailAddressAndPassward(mailAddress, password);
 		return administrator;
 	}
+
+	/**
+	 * メールアドレスが重複しているかの確認
+	 *  @param mailAddress メールアドレス
+	 *  @return 重複している場合はtrue、それ以外はfalse
+	 */
+	public boolean isMailAddressDuplicated(String mailAddress) {
+		if (administratorRepository.findByMailAddress(mailAddress) != null) {
+			return true; 
+		}
+		return false;
+	}
+	
 }

@@ -86,7 +86,10 @@
                         th:errors="*{mailAddress}"
                         class="error-messages"
                       >
-                        メールアドレスを入力してください
+                      <label 
+                        th:if="${mailAddressDuplicate}"
+                        class="error-messages">このメールアドレスを入力してください</label>
+                        <span th:text="${mailAddressDuplicate}"></span>
                       </label>
                       <input
                         type="text"
@@ -99,6 +102,15 @@
                         th:text="${mailAddress}"
                         value="yamada@mail.com"
                       />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <label
+                        th:if="${mailAddressDuplicate}"
+                        class="error-messages">
+                        このメールアドレスは既に使用されています。
+                      </label>
                     </div>
                   </div>
                 </div>
