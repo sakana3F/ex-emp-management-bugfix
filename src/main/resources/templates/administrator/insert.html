@@ -104,6 +104,15 @@
                       />
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <label
+                        th:if="${mailAddressDuplicate}"
+                        class="error-messages">
+                        このメールアドレスは既に使用されています。
+                      </label>
+                    </div>
+                  </div>
                 </div>
                 <!-- パスワード -->
                 <div class="form-group">
